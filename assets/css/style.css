@@ -1,0 +1,157 @@
+/* 
+    Desafio : Elaborar um programa que receba estes dados de um utilizador.
+    Desenvolvido por : Kevin Brian
+    Email : kevinbrian105@gmail.com
+    Tel : +258 855874201 
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+ 
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+html,
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    
+}
+
+.appContainer{
+    background-color: #c3ebf5;
+    padding: 0px;
+    margin: 0px;
+    flex: 1 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    /* grid-template-rows: repeat(50%); */
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+
+.Container{
+    
+    grid-column: 3/-3;
+    height: 60%;
+    background-color: #ffffff;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 70% 10%;
+    padding: 20px;
+    border-radius: 10px;
+
+
+}
+
+.title{
+    /* border: 2px dashed red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.main{
+    /* border: 2px dashed greenyellow; */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    
+
+
+}
+
+.main>form{
+
+    /* border: 2px dashed red; */
+    grid-column: 2/-2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.developerInfo{
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(148, 147, 147);
+}
+
+
+/* 
+styling form inputs */
+
+form > .input{
+    border: 2px solid #027cce70;
+    border-radius: 5px;
+    display: flex;
+    padding: 7px;
+    
+    
+
+}
+
+.input > input{
+    flex: 1 0 auto;
+    margin-left:8px;
+    outline: none;
+    border: 0px transparent;
+    background-color: transparent;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    
+    
+}
+
+input::placeholder{
+    font-weight: 600;
+    
+    
+}
+
+
+
+#submitBtn{
+    padding: 6px;
+    background-color: #078ce4;
+    border: 0px solid transparent;
+    border-radius: 7px;
+    color: white;
+    font-size: 0.9rem;
+    transition: background 1s;
+}
+
+#submitBtn:hover{
+    background-color: #02456e;
+    color: rgb(255, 255, 255);
+
+}
+
+/* 
+styling icons */
+
+span > i{
+    color: #027BCE;
+    font-size: 0.9rem;
+
+}
+
+
+h4>i{
+    font-size: 1.5rem;
+}
+
