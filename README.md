@@ -1,5 +1,5 @@
 # registerForm
-/********************Desafio***************/
+/********************Desafio***************\
 Elaborar um programa que receba estes dados de um utilizador, nomeadamente:
 
 1-   NUIT;
