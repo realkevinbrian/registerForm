@@ -37,10 +37,8 @@ body{
     padding: 0px;
     margin: 0px;
     flex: 1 0 auto;
-
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    /* grid-template-rows: repeat(50%); */
     justify-content: center;
     align-items: center;
     
@@ -51,12 +49,12 @@ body{
 .InfoContainer{
     
     grid-column: 3/-3;
-    height: 60%;
+    height: 70%;
     background-color: #ffffff;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 30% 70%;
+    grid-template-rows: 35% 65%;
 
     
 
@@ -68,29 +66,27 @@ body{
     justify-content: center;
     grid-row:2/1;
     position:relative;
-    background-color: rgb(228, 227, 227);
+    background-color: #003049;
 
     
     
     
 }
 .header > .userIcon{
-    border: 2px dashed;
-    font-size: 4rem;
-
-    border: 2px solid transparent;
-    padding: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius:60%;
     position: absolute;
-    transform: translateY(40px);
-    background-color: rgb(255, 255, 255);
+    transform: translateY(45px);
+
     
+}
 
-
-
+.header > .userIcon >img{
+    border: 8px solid white;
+    border-radius: 50%;
+    width: 25%;
+    
 }
 
 
@@ -103,7 +99,16 @@ body{
 .showInfo{
     /* border: 2px dashed; */
     height: 70%;
+    
 
+}
+.showInfo>p{
+    text-align: center;
+
+    text-align: center;
+    margin: 0px;
+
+    
 }
 
 .showInfo > ul{
@@ -134,20 +139,18 @@ body{
 
 .showInfo > ul > li >span:nth-child(2){
     margin-left: 30px;
-    
-    
-    
-    
+    font-size: 0.8rem;
+
 }
 
 .showInfo > ul > li >span:nth-child(1){
 
     margin-left: 20px;
+    color: rgb(107, 107, 107);
+    font-size: 0.9rem;
     
-    
+        
 }
-
-
 
 
 .developerInfo{
@@ -160,10 +163,10 @@ body{
 
 
 
-/* 
-media queries */
 
-/* @media screen and (min-width:680px) and (max-width:710px){
+/*media queries */
+
+@media screen and (min-width:680px) and (max-width:710px){
 
     .profileContainer{
         display: grid;
@@ -173,18 +176,8 @@ media queries */
 
 
     .InfoContainer{
-
         grid-column: 3/-3;
-        height: 60%;
-        background-color: #ffffff;
-    
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 20% 70% 10%;
-        padding: 20px;
-        border-radius: 10px;
-    
-    
+        height: 70%;    
     }
 }
 
@@ -207,4 +200,4 @@ media queries */
         grid-column:4/-4 ;
         
     }
-} */
+}
