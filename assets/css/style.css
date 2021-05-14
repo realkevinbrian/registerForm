@@ -27,7 +27,7 @@ body{
 }
 
 .appContainer{
-    background-color: #c3ebf5;
+    background-color: #E8EFFF;
     padding: 0px;
     margin: 0px;
     flex: 1 0 auto;
@@ -88,7 +88,7 @@ body{
     font-size: 0.7rem;
     text-align: center;
     font-weight: bold;
-    color: rgb(148, 147, 147);
+    color: #475268;
 }
 
 
@@ -96,7 +96,7 @@ body{
 styling form inputs */
 
 form > .input{
-    border: 2px solid #027cce70;
+    border: 2px solid #B9D1FC;
     border-radius: 5px;
     display: flex;
     padding: 7px;
@@ -127,7 +127,7 @@ input::placeholder{
 
 #submitBtn{
     padding: 6px;
-    background-color: #078ce4;
+    background-color: #518AFF;
     border: 0px solid transparent;
     border-radius: 7px;
     color: white;
@@ -145,7 +145,7 @@ input::placeholder{
 styling icons */
 
 span > i{
-    color: #027BCE;
+    color: #518AFF;
     font-size: 0.9rem;
 
 }
@@ -155,3 +155,54 @@ h4>i{
     font-size: 1.5rem;
 }
 
+
+
+
+/* 
+media queries */
+
+@media screen and (min-width:680px) and (max-width:710px){
+
+    .appContainer{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+
+    }
+
+
+    .Container{
+
+        grid-column: 3/-3;
+        height: 60%;
+        background-color: #ffffff;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 70% 10%;
+        padding: 20px;
+        border-radius: 10px;
+    
+    
+    }
+}
+
+
+@media screen and (max-device-width:480px){
+    .Container{
+        grid-column:2/-2;
+    }
+}
+
+
+@media screen and (min-width:1024px){
+    .appContainer{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+    }
+
+    .Container{
+
+        grid-column:4/-4 ;
+        
+    }
+}

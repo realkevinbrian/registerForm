@@ -1,0 +1,210 @@
+/* 
+    Desafio : Elaborar um programa que receba estes dados de um utilizador.
+    Desenvolvido por : Kevin Brian
+    Email : kevinbrian105@gmail.com
+    Tel : +258 855874201 
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+ 
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+ul>li{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    
+}
+
+.profileContainer{
+    background-color: #E8EFFF;
+    padding: 0px;
+    margin: 0px;
+    flex: 1 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    /* grid-template-rows: repeat(50%); */
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+
+.InfoContainer{
+    
+    grid-column: 3/-3;
+    height: 60%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 70%;
+
+    
+
+}
+
+.header{
+    
+    display: flex;
+    justify-content: center;
+    grid-row:2/1;
+    position:relative;
+    background-color: rgb(228, 227, 227);
+
+    
+    
+    
+}
+.header > .userIcon{
+    border: 2px dashed;
+    font-size: 4rem;
+
+    border: 2px solid transparent;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:60%;
+    position: absolute;
+    transform: translateY(40px);
+    background-color: rgb(255, 255, 255);
+    
+
+
+
+}
+
+
+.main{
+    /* border: 2px dashed; */
+    display: grid;
+    align-items: center;
+}
+
+.showInfo{
+    /* border: 2px dashed; */
+    height: 70%;
+
+}
+
+.showInfo > ul{
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 0px;
+    margin: 0px;
+   
+    
+    
+}
+
+.showInfo > ul > li {
+    display: flex;
+    align-content: flex-end;
+    justify-content: space-between;
+    margin: 10px;
+    /* border: 1px solid; */
+    border-radius: 4px;
+    padding: 2px;
+    background-color: rgb(250, 249, 249);
+
+    
+}
+
+
+.showInfo > ul > li >span:nth-child(2){
+    margin-left: 30px;
+    
+    
+    
+    
+}
+
+.showInfo > ul > li >span:nth-child(1){
+
+    margin-left: 20px;
+    
+    
+}
+
+
+
+
+.developerInfo{
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: bold;
+    color: #475268;
+}
+
+
+
+
+/* 
+media queries */
+
+/* @media screen and (min-width:680px) and (max-width:710px){
+
+    .profileContainer{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+
+    }
+
+
+    .InfoContainer{
+
+        grid-column: 3/-3;
+        height: 60%;
+        background-color: #ffffff;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 70% 10%;
+        padding: 20px;
+        border-radius: 10px;
+    
+    
+    }
+}
+
+
+@media screen and (max-device-width:480px){
+    .InfoContainer{
+        grid-column:2/-2;
+    }
+}
+
+
+@media screen and (min-width:1024px){
+    .profileContainer{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+    }
+
+    .InfoContainer{
+
+        grid-column:4/-4 ;
+        
+    }
+} */
