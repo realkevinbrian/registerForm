@@ -50,7 +50,7 @@ body{
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 20% auto auto;
     padding: 20px;
     border-radius: 10px;
 
