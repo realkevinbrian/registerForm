@@ -54,7 +54,7 @@ body{
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 35% 65%;
+    grid-template-rows: 30% 65%;
 
     
 
@@ -77,7 +77,7 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    transform: translateY(45px);
+    transform: translateY(50px);
 
     
 }
