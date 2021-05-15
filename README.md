@@ -27,3 +27,10 @@ Só deve aceitar caracteres numéricos e os caracteres + ou espaço. Pode usar q
 
 
 Vista em: https://emprego.mmo.co.mz/vagas/para-programadora-estagiaria-kma-2/#ixzz6umAApbZU
+
+
+
+#added a new Feature to display data with out opening another page.
+
+
+
