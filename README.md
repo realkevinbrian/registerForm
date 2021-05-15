@@ -14,9 +14,9 @@ O programa deve ser criado para ser possível submeter. No fim ele imprimir na t
 
 Condições
 
-1.     O NUIT deve ser 9 dígitos;
+1.     O NUIT deve ser 9 dígitos;--X
 
-2.     O campo do nome não pode conter carateres especiais (-,_,”,’,/,*,+,-,) ou números;
+2.     O campo do nome não pode conter carateres especiais (-,_,”,’,/,*,+,-,) ou números;--
 
 3.    O campo para data de nascimento só deve aceitar números inteiros ou alguma formatação de data;
 
