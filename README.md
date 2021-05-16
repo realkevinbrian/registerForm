@@ -24,6 +24,4 @@ Condições
 
 Só deve aceitar caracteres numéricos e os caracteres + ou espaço. Pode usar qualquer linguagem Web de preferência (PHP e js).
 
-
-
 Vista em: https://emprego.mmo.co.mz/vagas/para-programadora-estagiaria-kma-2/#ixzz6umAApbZU

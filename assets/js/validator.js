@@ -1,6 +1,6 @@
 //->exporting Modules
 
-export {validateChar,nameValidate,cellNumberValidate}
+export {validateChar,nameValidate,cellNumberValidate,validateDate}
 
 /*
 this file contains validator function
@@ -168,5 +168,17 @@ function cellNumberValidate(number) {
     }
 }
 
+
+
+
+function validateDate(arg){
+
+    if(arg === ""){
+        return false;
+    }else{
+        return true;
+    }
+
+}
 
 
