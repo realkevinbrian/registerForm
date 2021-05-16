@@ -144,16 +144,16 @@ input::placeholder{
 
 #submitBtn{
     padding: 6px;
-    background-color: #518AFF;
+    background-color: #4080ff;
     border: 0px solid transparent;
     border-radius: 7px;
     color: white;
     font-size: 0.9rem;
-    transition: background 1s;
+    transition: background 0.1s linear;
 }
 
 #submitBtn:hover{
-    background-color: #02456e;
+    background-color: #0464a0;
     color: rgb(255, 255, 255);
 
 }
