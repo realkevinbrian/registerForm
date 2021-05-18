@@ -4,7 +4,7 @@ if(isset($_REQUEST['nuit'])){
 
 
     //check if everything is submitted;
-    $nuit  = $_REQUEST['nuit'];
+    $nuit  = isset($_REQUEST['nuit']) ? $_REQUEST['nuit'] : "";
     $name = isset($_REQUEST['name']) ? $_REQUEST['name'] : "";
     $dateOfBirth = isset($_REQUEST['dateOfBirth']) ? $_REQUEST['dateOfBirth'] : "";
     $telNumber = isset($_REQUEST['telNumber']) ? $_REQUEST['telNumber'] : "";
@@ -18,7 +18,7 @@ if(isset($_REQUEST['nuit'])){
     if(!isset($nuit) || empty($nuit)){
 
         $ok = false;
-        $statusMessage [] = "NAME MUST NOT BE EMPTY";
+        $statusMessage [] = "NUIT MUST NOT BE EMPTY";
     }
 
     //check for condition of name

@@ -57,7 +57,7 @@ function submitForm (elem) {
     // telNumber=${form.telNumber.value}`;
 
     let nuitNum = parseInt(form.nuit.value);
-    let data = `telNumber=${form.telNumber.value}&nuit=${nuitNum}&name=${form.name.value}&dateOfBirth=${form.dateOfBirth.value}`;
+    let data = `telNumber=${form.telNumber.value}&nuit=${form.nuit.value}&name=${form.name.value}&dateOfBirth=${form.dateOfBirth.value}`;
 
     //->onWhen state
     XHR.onreadystatechange = function (){
