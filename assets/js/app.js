@@ -4,3 +4,7 @@
     Email : kevinbrian105@gmail.com
     Tel : +258 855874201 
 */
+
+
+import{validateChar,nameValidate,cellNumberValidate} from "./validator.js";
+

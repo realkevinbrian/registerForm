@@ -9,9 +9,74 @@
 
  <?php 
 
- if(isset($_REQUEST['submit'])){
-     
- }
+
+if(isset($_REQUEST['submit'])){
+
+
+    //check if everything is submitted;
+    $nuit  = isset($_REQUEST['nuit']) ? $_REQUEST['nuit'] : "";
+    $name = isset($_REQUEST['name']) ? $_REQUEST['name'] : "";
+    $dateOfBirth = isset($_REQUEST['date']) ? $_REQUEST['date'] : "";
+    $telNumber = isset($_REQUEST['tel']) ? $_REQUEST['tel'] : "";
+
+    //init status
+    $ok = true;
+    $statusMessage = array();
+    $data = array();
+
+    //check for condition of nuit
+    if(!isset($nuit) || empty($nuit)){
+
+        $ok = false;
+        $statusMessage [] = "NUIT MUST NOT BE EMPTY";
+    }
+
+    //check for condition of name
+    if(!isset($name) || empty($name)){
+
+        $ok = false;
+        $statusMessage [] = "NAME MUST NOT BE EMPTY";
+    }
+
+    
+    //check for condition of TELEPHONE
+    if(!isset($telNumber) || empty($telNumber)){
+
+        $ok = false;
+        $statusMessage [] = "TEL NUMBER MUST NOT BE EMPTY";
+    }
+    
+    
+    //check for condition of birth day
+    if(!isset($dateOfBirth) || empty($dateOfBirth)){
+
+        $ok = false;
+        $statusMessage [] = "DOB MUST NOT BE EMPTY";
+    }
+
+    
+    if($ok){
+
+        //correct all data
+        
+        //Add form data to the form
+        $data ['name'] = $name;
+        $data ['nuit'] = $nuit;
+        $data ['telNumber'] = $telNumber;
+        $data['dob'] = $dateOfBirth;
+        
+    }else {
+
+        header("Location:index.html");
+    }
+
+    echo json_decode(
+        array (
+            "ok" => $ok;
+            "errorMessage" => $statusMessage;
+        )
+    )
+}
 
 ?>
 <!DOCTYPE html>
@@ -46,28 +111,28 @@
                 
                 <div class="showInfo">
                     <p>
-                        <span>Informação</span>
+                        <span></span>
                     </p>
                     
                     <ul>
                         <li>
                             <span>NUIT :</span>
-                            <span>1234567</span>
+                            <span><?php echo $data['nuit']?></span>
                         </li>
 
                         <li>
                             <span>Nome Completo :</span>
-                            <span>Kevin Brian</span>
+                            <span><?php echo $data['name']?></span>
                         </li>
 
                         <li>
                             <span>Data :</span>
-                            <span>12/23/1969</span>
+                            <span><?php echo $data['dob']?></span>
                         </li>
 
                         <li>
                             <span>Numero de Telefone :</span>
-                            <span>+258 855874201</span>
+                            <span><?php echo $data['telNumber']?></span>
                         </li>
                     </ul>
 

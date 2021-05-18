@@ -29,17 +29,14 @@
             
             <div class="main">
 
-                <form action="profile.php" method="post">
-
-                    
-
+                <form action="profile.php" method="post" id="form">
                     <div class="input">
                         <label for="NUIT">
                             <span>
                                 <i class="far fa-address-card"></i>
                             </span>
                         </label>
-                        <input type="text" placeholder="NUIT" name="nuit">
+                        <input type="text" placeholder="NUIT" name="nuit" onforminput="validateChar()">
                     </div>
 
                     
@@ -107,6 +104,6 @@
 
 
 
-    <script src="./assets/js/app.js"></script>
+    <script type="module" src="./assets/js/app.js"></script>
 </body>
 </html>
