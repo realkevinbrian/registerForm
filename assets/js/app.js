@@ -65,14 +65,50 @@ function submitForm (elem) {
         //check for status
         if(this.status === 200 && this.readyState === 4){
             // //->
-            // console.log("->" + this.responseText); 
+            //error displaying
+
+            let responseObject = null;
             
-            let response = JSON.parse(this.responseText);
-            console.log(response);
+
+            try {
+          responseObject = JSON.parse(this.responseText)
+            handleObject(responseObject);
+        }catch(error){
+                console.log(error);
+            }
+
+
+
+
         }
     }
     //->send request
     XHR.send(data)
+    
+}
 
+
+function handleObject(responseObject){
+    
+    console.log(responseObject['errorMessage']);
+
+    if(!responseObject['ok']){
+
+        //loop through errors display errors
+        let responseErrors = responseObject['errorMessage'];
+        let errorsContainer = document.getElementById("errors");
+        errorsContainer.style.display = "flex";
+        
+
+        for(let error of responseErrors){
+            let li = document.createElement("li");
+            errorsContainer.appendChild(li);
+            let errorMess = document.createTextNode(error);
+            li.appendChild(errorMess);
+        }        
+    }
 
 }
+
+
+
