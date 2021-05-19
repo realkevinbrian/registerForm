@@ -1,6 +1,6 @@
 //->exporting Modules
 
-export {validateChar,nameValidate,cellNumberValidate}
+export {validateChar,validateName,validateCellNumber,dateValidate}
 
 /*
 this file contains validator function
@@ -9,6 +9,18 @@ Developer : @realKevinBrian
 Email : kevinbrian105@gmail.com
 
 */
+
+// date Validator
+
+function dateValidate (args){
+
+    if(args === ""){
+        return false;
+    }else{
+        return true;
+    }
+
+}
 
 
 /*
@@ -39,7 +51,7 @@ function validateChar(args){
 name Validator
 */
 
-function nameValidate(args) {
+function validateName(args) {
 
     args.toString();
     let pattern = /[0-9,_”’/*+-]|[)('\}{./]/ig;
@@ -65,7 +77,7 @@ cell Number Valitor
 
 */
 
-function cellNumberValidate(number) {
+function validateCellNumber(number) {
     let checkNums = number.split(" ").join("").split("");
 
     //->we join the chucks into a string and slice the first index of the string

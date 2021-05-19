@@ -20,15 +20,11 @@
 
     <!-- container -->
     <div class="appContainer">
-
         <div class="Container"> <!-- container for the login Form-->
-
             <div class="title">
                 <h4><i class="fas fa-user"></i> Cadastre-se</h4>
             </div>
-            
             <div class="main">
-
                 <form action="profile.php" method="post" id="form">
                     <div class="input">
                         <label for="NUIT">
@@ -36,18 +32,22 @@
                                 <i class="far fa-address-card"></i>
                             </span>
                         </label>
-                        <input type="text" placeholder="NUIT" name="nuit" onforminput="validateChar()">
+                        <input type="text" placeholder="NUIT" name="nuit" id="nuit">
                     </div>
 
-                    
+                    <!-- error Displaying -->
+                    <span class="error"></span>
+
                     <div class="input">
                         <label for="Nome">
                             <span>
                                 <i class="far fa-user"></i>
                             </span>
                         </label>
-                        <input type="text" placeholder="Nome Completo" name="name">
+                        <input type="text" placeholder="Nome Completo" name="name" id="name">
                     </div>
+                    <!-- error Displaying -->
+                    <span class="error"></span>
 
                     
                     <div class="input">
@@ -56,8 +56,10 @@
                                 <i class="fas fa-table"></i>
                             </span>
                         </label>
-                        <input type="date" id="" name="date">
+                        <input type="text" id="dob" name="date" onfocus="(this.type='date')" placeholder="Data de Nascimento">
                     </div>
+                      <!-- error Displaying -->
+                      <span class="error"></span>
 
                     <div class="input">
                         <label for="Número de telefone.">
@@ -65,21 +67,22 @@
                                 <i class="fas fa-mobile-alt"></i>
                             </span>
                         </label>
-                        <input type="tel" name="tel"  placeholder="Número de telefone">
+                        <input type="tel" name="tel" id="tel" placeholder="Número de telefone">
                     </div>
+                    <!-- error Displaying -->
+                    <span class="error"></span>
                     <button type="submit" id="submitBtn" name ="submit"> <i class="fas fa-sign-in-alt"></i> Registar</button>
                 </form>
-
-
                 
             </div>
 
             <!-- error container -->
-            <ul class="error">
+            <!-- <ul class="error">
                 <li>Error</li>
                 <li>Error</li>
                 <li>Error</li>
-            </ul>
+            </ul> -->
+            <span class="error" id="spaceError"></span>
         <!-- error container -->
 
 
@@ -105,5 +108,7 @@
 
 
     <script type="module" src="./assets/js/app.js"></script>
+    
+
 </body>
 </html>

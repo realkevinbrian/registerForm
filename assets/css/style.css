@@ -57,7 +57,7 @@ body{
 
 }
 
-.error{
+#error{
 
     /* list-style: none; */
     border: 2px solid;
@@ -72,6 +72,29 @@ body{
     margin-bottom: 0px;
 
 }
+
+.error{
+
+    /* list-style: none; */
+
+    font-size: 0.6rem;
+    flex-direction: column;
+    justify-content: center;
+    color: red;
+    display: none;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+
+}
+
+#spaceError{
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+
 
 .title{
     /* border: 2px dashed red; */

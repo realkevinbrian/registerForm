@@ -70,12 +70,7 @@ if(isset($_REQUEST['submit'])){
         header("Location:index.html");
     }
 
-    echo json_decode(
-        array (
-            "ok" => $ok;
-            "errorMessage" => $statusMessage;
-        )
-    )
+    
 }
 
 ?>
