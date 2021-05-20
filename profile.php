@@ -9,7 +9,6 @@
 
  <?php 
 
-
 if(isset($_REQUEST['submit'])){
 
 
@@ -54,6 +53,20 @@ if(isset($_REQUEST['submit'])){
         $statusMessage [] = "DOB MUST NOT BE EMPTY";
     }
 
+    if(isset($_FILES['photo'])){
+
+        $ok = true;
+        $post_image = isset($_FILES['photo']) ? $_FILES['photo']['name'] : "";
+        $post_image_temp = $_FILES['photo']['tmp_name'];
+        $dir = "./uploads/";
+        move_uploaded_file($post_image_temp, "./uploads/$post_image");
+    }
+
+    if(!isset($_FILES['photo'])){
+        $ok = false;
+    }
+        
+    
     
     if($ok){
 
@@ -66,11 +79,9 @@ if(isset($_REQUEST['submit'])){
         $data['dob'] = $dateOfBirth;
         
     }else {
-
         header("Location:index.html");
     }
-
-    
+ 
 }
 
 ?>
@@ -95,7 +106,7 @@ if(isset($_REQUEST['submit'])){
             <div class="header">
                 <div class="userIcon">
                     <!-- <i class="fas fa-user"></i> -->
-                    <img src="./assets/avatar/avatar.svg" alt="Avatar" >
+                    <img src="./uploads/<?php echo $post_image;?>" alt="Avatar">
                 </div>
 
                 

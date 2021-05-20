@@ -77,15 +77,25 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    transform: translateY(50px);
+    transform: translateY(40px);
+    width: 100px;
 
     
 }
 
 .header > .userIcon >img{
-    border: 8px solid white;
+    border: 4px solid white;
     border-radius: 50%;
-    width: 25%;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    
+    
+    
+    
+    
+    
+    
     
 }
 
